@@ -73,6 +73,61 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-btyeDance-first" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/08/03/btyeDance-first/" class="article-date">
+  <time class="dt-published" datetime="2023-08-03T12:19:55.000Z" itemprop="datePublished">2023-08-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/08/03/btyeDance-first/">btyeDance-first</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="字节跳动一面总结"><a href="#字节跳动一面总结" class="headerlink" title="字节跳动一面总结"></a>字节跳动一面总结</h1><p>自我介绍就直接跳过了，每轮必有的</p>
+<h2 id="1-项目介绍"><a href="#1-项目介绍" class="headerlink" title="1.项目介绍"></a>1.项目介绍</h2><p>主要询问了一下地图相关的优化的事情（面试官好像都对这个比较感兴趣）<br>相对来说，地图上的优化主要是两部分：  </p>
+<ol>
+<li>地图上的海量点的优化</li>
+<li>地图上的拖拽，放大与缩小的性能优化<br>这个问题，可以参考<a target="_blank" rel="noopener" href="https://developers.google.cn/maps/optimization-guide?hl=zh_cn">谷歌地图优化指南</a></li>
+</ol>
+<p>关于网页搭建平台的底部属性，你有了解过吗，知道这个拖拽生成页面的原理吗</p>
+<h2 id="2-vue基础"><a href="#2-vue基础" class="headerlink" title="2.vue基础"></a>2.vue基础</h2><p>vue2与vue3更熟悉哪个<br>composition api的优点是什么,设计理念是什么<br>vue3的响应式原理与vue2有什么区别，并且vue3的响应式原理是改进了什么，可以做到vue2做不到的点，<br>reactive的底层实现原理了解过吗</p>
+<h2 id="3-CSS基础"><a href="#3-CSS基础" class="headerlink" title="3.CSS基础"></a>3.CSS基础</h2><p>css的伪类与为元素了解吗，什么是伪类，什么是伪元素</p>
+<h2 id="4-算法题"><a href="#4-算法题" class="headerlink" title="4.算法题"></a>4.算法题</h2><p>手写promise.all</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="property">all</span> = <span class="keyword">function</span> (<span class="params">promises</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = []</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; promises.<span class="property">length</span>; i++) &#123;</span><br><span class="line">      promises[i].<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        result[i] = res</span><br><span class="line">        count++</span><br><span class="line">        <span class="keyword">if</span> (count === promises.<span class="property">length</span>) &#123;</span><br><span class="line">          <span class="title function_">resolve</span>(result)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">reject</span>(err)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="闲聊"><a href="#闲聊" class="headerlink" title="闲聊"></a>闲聊</h2><ol>
+<li>部门有用过拆分数字位数的方法吗</li>
+<li>有没有工作中令你印象非常深刻的事情，比较难忘的</li>
+</ol>
+<p>字节体验还是ok的，面试官甚至还是老乡（教会了不少东西）</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/08/03/btyeDance-first/" data-id="clkv5qx6x0000e4ti4n9c9tys" data-title="btyeDance-first" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-zoom-blog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/07/30/zoom-blog/" class="article-date">
@@ -193,7 +248,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li></ul>
     </div>
   </div>
 
@@ -204,6 +259,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/08/03/btyeDance-first/">btyeDance-first</a>
+          </li>
         
           <li>
             <a href="/2023/07/30/zoom-blog/">zoom-blog</a>
