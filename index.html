@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>async博客</title>
+  <title>async的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="async的博客">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:site_name" content="async的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="liushuo">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="async的博客" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -43,7 +43,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">async博客</a>
+        <a href="/" id="logo">async的博客</a>
       </h1>
       
     </div>
@@ -59,12 +59,12 @@
       <nav id="sub-nav">
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
         
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
       </div>
     </div>
   </div>
@@ -104,7 +104,8 @@
 <p>关于网页搭建平台的底部属性，你有了解过吗，知道这个拖拽生成页面的原理吗</p>
 <h2 id="2-vue基础"><a href="#2-vue基础" class="headerlink" title="2.vue基础"></a>2.vue基础</h2><p>vue2与vue3更熟悉哪个<br>composition api的优点是什么,设计理念是什么<br>vue3的响应式原理与vue2有什么区别，并且vue3的响应式原理是改进了什么，可以做到vue2做不到的点，<br>reactive的底层实现原理了解过吗</p>
 <h2 id="3-CSS基础"><a href="#3-CSS基础" class="headerlink" title="3.CSS基础"></a>3.CSS基础</h2><p>css的伪类与为元素了解吗，什么是伪类，什么是伪元素</p>
-<h2 id="4-算法题"><a href="#4-算法题" class="headerlink" title="4.算法题"></a>4.算法题</h2><p>手写promise.all</p>
+<h2 id="4-表单经验"><a href="#4-表单经验" class="headerlink" title="4.表单经验"></a>4.表单经验</h2><p>开发大型的表单，有啥需要注意的联动啥的点吗，有什么技巧吗</p>
+<h2 id="5-算法题"><a href="#5-算法题" class="headerlink" title="5.算法题"></a>5.算法题</h2><p>手写promise.all</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="property">all</span> = <span class="keyword">function</span> (<span class="params">promises</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> result = []</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; promises.<span class="property">length</span>; i++) &#123;</span><br><span class="line">      promises[i].<span class="title function_">then</span>(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        result[i] = res</span><br><span class="line">        count++</span><br><span class="line">        <span class="keyword">if</span> (count === promises.<span class="property">length</span>) &#123;</span><br><span class="line">          <span class="title function_">resolve</span>(result)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">reject</span>(err)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="闲聊"><a href="#闲聊" class="headerlink" title="闲聊"></a>闲聊</h2><ol>
@@ -116,7 +117,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/08/03/btyeDance-first/" data-id="clkv5qx6x0000e4ti4n9c9tys" data-title="btyeDance-first" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/08/03/btyeDance-first/" data-id="clkv5qx6x0000e4ti4n9c9tys" data-title="btyeDance-first" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -167,58 +168,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/30/zoom-blog/" data-id="clkp9rgiv0000uotie3r365er" data-title="zoom-blog" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/07/30/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-07-30T08:38:36.780Z" itemprop="datePublished">2023-07-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/07/30/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/07/30/hello-world/" data-id="clkp80ys50000mwtiakx87y9j" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/07/30/zoom-blog/" data-id="clkp9rgiv0000uotie3r365er" data-title="zoom-blog" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -246,9 +196,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">August 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">七月 2023</a></li></ul>
     </div>
   </div>
 
@@ -256,7 +206,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
         
@@ -266,10 +216,6 @@
         
           <li>
             <a href="/2023/07/30/zoom-blog/">zoom-blog</a>
-          </li>
-        
-          <li>
-            <a href="/2023/07/30/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -285,7 +231,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2023 John Doe<br>
+      &copy; 2023 liushuo<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
